@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Red Striped Armchair</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin: 0; }
+    iframe { width: 100%; height: 600px; border: none; }
+    #popup {
+      position: fixed;
+      top: 30%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px; background: #fff;
+      border: 2px solid #333; border-radius: 10px;
+      padding: 20px; display: none;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2); z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+<iframe id="echo3d" src="https://go.echo3d.co/KMye" allow="camera; gyroscope; accelerometer" allowfullscreen></iframe>
+
+<div id="popup">
+  <h2>Red Striped Armchair</h2>
+  <p>Hand-crafted in Worcestershire</p>
+  <p><strong>£299.00</strong></p>
+</div>
+
+<script>
+  const iframe = document.getElementById("echo3d");
+  const popup = document.getElementById("popup");
+
+  iframe.addEventListener("click", () => {
+    popup.style.display = "block";
+  });
+
+  popup.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+</script>
+
+</body>
+</html>
